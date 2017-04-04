@@ -26,10 +26,14 @@ public class Person {
 
     }
 
+    public StringProperty firstNameProperty() {
+        return firstName;
+    }
+
     public String getFirstName() {
         return firstName.get();
     }
-    
+
 
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);

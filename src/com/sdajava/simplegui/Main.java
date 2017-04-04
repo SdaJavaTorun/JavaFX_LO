@@ -34,6 +34,9 @@ public class Main extends Application {
 
     }
 
+    public ObservableList<Person> getPersonData() {
+        return personData;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
