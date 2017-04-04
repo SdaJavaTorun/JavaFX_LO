@@ -1,5 +1,6 @@
-package com.sdajava.simplegui;
+package com.sdajava.simplegui.view;
 
+import com.sdajava.simplegui.MainApp;
 import com.sdajava.simplegui.model.Person;
 import javafx.fxml.FXML;
 
@@ -29,7 +30,7 @@ public class PersonOverviewController {
     private Label birthdayLabel;
 
     //referencja do glownej klasy
-    private Main main;
+    private MainApp main;
 
     public PersonOverviewController() {
     }
@@ -40,9 +41,9 @@ public class PersonOverviewController {
         lastNameColumn.setCellValueFactory(data -> data.getValue().lastNameProperty());
     }
 
-    public void setMain(Main main){
-        this.main = main;
-        personTable.setItems(main.getPersonData());
+    public void setMain(MainApp main){
+         this.main = main;
+         personTable.setItems(main.getPersonData());
     }
 
 }
