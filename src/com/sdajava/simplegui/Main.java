@@ -75,6 +75,11 @@ public class Main extends Application {
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(personOverview);
+
+            PersonOverviewController controller = loader.getController();
+            controller.setMain(this);
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
