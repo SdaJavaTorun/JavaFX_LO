@@ -40,6 +40,11 @@ public class PersonOverviewController {
         firstNameColumn.setCellValueFactory(data -> data.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(data -> data.getValue().lastNameProperty());
         showPersonDetails(null);
+
+
+        personTable.getSelectionModel().selectedItemProperty()
+            .addListener((observable, x, y) -> showPersonDetails(y));
+
     }
 
     public void setMain(MainApp main){
