@@ -50,4 +50,52 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName.set(lastName);
     }
+
+    public String getStreet() {
+        return street.get();
+    }
+
+    public StringProperty streetProperty() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street.set(street);
+    }
+
+    public int getPostalCode() {
+        return postalCode.get();
+    }
+
+    public IntegerProperty postalCodeProperty() {
+        return postalCode;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode.set(postalCode);
+    }
+
+    public String getCity() {
+        return city.get();
+    }
+
+    public StringProperty cityProperty() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city.set(city);
+    }
+
+    public LocalDate getBirthday() {
+        return birthday.get();
+    }
+
+    public ObjectProperty<LocalDate> birthdayProperty() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday.set(birthday);
+    }
 }

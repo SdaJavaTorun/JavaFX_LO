@@ -39,11 +39,33 @@ public class PersonOverviewController {
     private void initialize(){
         firstNameColumn.setCellValueFactory(data -> data.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(data -> data.getValue().lastNameProperty());
+        showPersonDetails(null);
     }
 
     public void setMain(MainApp main){
          this.main = main;
          personTable.setItems(main.getPersonData());
+    }
+
+    private void showPersonDetails(Person person){
+
+        if(person!=null){
+            firstNameLabel.setText(person.getFirstName());
+            lastNameLabel.setText(person.getLastName());
+            streetLabel.setText(person.getStreet());
+            postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
+            cityLabel.setText(person.getCity());
+
+        }else{
+            firstNameLabel.setText("");
+            lastNameLabel.setText("");
+            streetLabel.setText("");
+            postalCodeLabel.setText("");
+            cityLabel.setText("");
+            birthdayLabel.setText("");
+        }
+
+
     }
 
 }
